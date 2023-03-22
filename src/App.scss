@@ -1,0 +1,63 @@
+.main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(129, 199, 246);
+}
+
+.content-box {
+  background-color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 15px;
+  width: 500px;
+  padding: 15px;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+  & > div {
+    margin-bottom: 12px;
+  }
+}
+
+input[type="radio"] {
+  margin-left: 10px;
+}
+
+.input-group {
+  width: 100%;
+  display: flex;
+  & > .action {
+    width: 20px;
+    & > div {
+      cursor: pointer;
+      text-align: center;
+      outline: 1px solid black;
+      line-height: 14px;
+    }
+  }
+  & > .texts {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    & > .title {
+      text-align: center;
+      font-weight: 550;
+      width: 100%;
+      outline: 1px solid black;
+      line-height: 14px;
+    }
+    & > .input-text-pair {
+      width: 100%;
+      & > input {
+        border-width: 0;
+        width: calc(50% - 10px);
+        outline: 1px solid black;
+      }
+    }
+  }
+  & > .action > *, & > .texts > .title, & > .texts > .input-text-pair > input {
+    padding: 5px;
+    height: 20px;
+  }
+}
